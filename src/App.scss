@@ -1,0 +1,91 @@
+@import './styles/index.scss';
+
+.App {
+  text-align: center;
+  background-color: $main-color;
+}
+
+.wrapper {
+  background: linear-gradient(to right, rgb(255, 105, 15), rgb(232, 58, 26));
+  padding: 15px 30px;
+}
+
+.auto-search {
+  width: 100%;
+}
+
+.container {
+  @extend .wrapper;
+
+  margin: 20px auto 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 70px;
+  box-sizing: border-box;
+}
+
+.res-container{
+  box-shadow: 0px 5px 5px $light-grey;
+  border-top: 1px solid $light-grey;
+  background-color: $main-color;
+  position: absolute;
+  top: 55px;
+
+  &__search-results {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  &__title {
+    margin: 5px;
+    font-weight: 600;
+    font-size: $main-font-size;
+  }
+  &__subtitle {
+    margin: 5px;
+    font-size: $small-font-size;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+  }
+
+  &__search-input {
+    position: relative;
+    box-sizing: border-box;
+    height: 40px;
+
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    color: $main-color;
+    padding-left: 60px;
+
+    &::placeholder {
+      color: $main-color;
+    }
+
+    &:focus {
+      color: $text-color-dark;
+      border: none;
+      outline: none;
+      background-color: $main-color;
+    }
+  }
+
+  &__btn {
+    background-color: $main-color;
+    border: none;
+  }
+}
